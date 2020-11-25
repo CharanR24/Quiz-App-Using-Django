@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Welcome To the Quiz App!!! </h1><br><br>
+<p>Do you want to create and take quizzes? With the help of Quiz App this becomes all very simple. With this app you can create, take and share quizzes.</p><br>
+<h1>Login and start !</h1>
+{% if user.is_authenticated %}
+    <p>Username: {{user.username}}</p>
+    <p>Name: {{user.first_name}} {{user.last_name}}</p>
+    <p>Email: {{user.email}}</p>
+{% endif %}
+    
+{% endblock  %}
